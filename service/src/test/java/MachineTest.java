@@ -17,19 +17,8 @@ import java.util.stream.IntStream;
 import static org.junit.Assert.assertEquals;
 
 public class MachineTest {
-    //private static Machine machine;
-    private Machine machine= new MachineImpl();
-
-    @BeforeClass
-    public static void setUp(){
-        //machine = Factory.newMachine();
-    }
-
-    @AfterClass
-    public static void destroy(){
-        //machine = null;
-    }
-
+    private Machine machine = new MachineImpl();
+    
     @Test
     public void getProductAndRemainingPrice_ChocolateFor25Coins_ChocolateAnd10CoinBalance(){
         long price = machine.getPrice(Product.CHOCOLATE);
