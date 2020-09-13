@@ -1,6 +1,6 @@
 package com.deloitte.base;
 
-public class DropBox<P,C> {
+public class CollectionBox<P,C> {
     private P product;
     private C coins;
     public P getProduct(){
@@ -9,7 +9,7 @@ public class DropBox<P,C> {
     public C getCoins(){
         return coins;
     }
-    public DropBox(P product, C coins) {
+    public CollectionBox(P product, C coins) {
         this.product = product;
         this.coins = coins;
     }

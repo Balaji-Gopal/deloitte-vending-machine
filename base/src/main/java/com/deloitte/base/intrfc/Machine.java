@@ -1,6 +1,6 @@
 package com.deloitte.base.intrfc;
 
-import com.deloitte.base.DropBox;
+import com.deloitte.base.CollectionBox;
 import com.deloitte.base.enm.Coin;
 import com.deloitte.base.enm.Product;
 
@@ -11,5 +11,5 @@ public interface Machine {
     void putCoin(Coin coin);
     List<Coin> cancel();
     void reset();
-    DropBox<Product,List<Coin>> getProductAndRemainingPrice();
+    CollectionBox<Product,List<Coin>> getProductAndRemainingPrice();
 }

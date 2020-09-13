@@ -1,6 +1,6 @@
 /home/bg1179@ADKPISOFT.COM/PersonalDocuments/deloitte-vending-machine/base/src/main/java/com/deloitte/base/exception/IncompletePaymentException.java
+/home/bg1179@ADKPISOFT.COM/PersonalDocuments/deloitte-vending-machine/base/src/main/java/com/deloitte/base/CollectionBox.java
 /home/bg1179@ADKPISOFT.COM/PersonalDocuments/deloitte-vending-machine/base/src/main/java/com/deloitte/base/enm/Coin.java
-/home/bg1179@ADKPISOFT.COM/PersonalDocuments/deloitte-vending-machine/base/src/main/java/com/deloitte/base/DropBox.java
 /home/bg1179@ADKPISOFT.COM/PersonalDocuments/deloitte-vending-machine/base/src/main/java/com/deloitte/base/Stock.java
 /home/bg1179@ADKPISOFT.COM/PersonalDocuments/deloitte-vending-machine/base/src/main/java/com/deloitte/base/intrfc/Machine.java
 /home/bg1179@ADKPISOFT.COM/PersonalDocuments/deloitte-vending-machine/base/src/main/java/com/deloitte/base/exception/NoChangeException.java

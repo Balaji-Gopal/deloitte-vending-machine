@@ -1,4 +1,4 @@
-import com.deloitte.base.DropBox;
+import com.deloitte.base.CollectionBox;
 import com.deloitte.base.enm.Coin;
 import com.deloitte.base.enm.Product;
 import com.deloitte.base.exception.IncompletePaymentException;
@@ -35,9 +35,9 @@ public class MachineTest {
         long price = machine.getPrice(Product.CHOCOLATE);
         assertEquals(Product.CHOCOLATE.getPrice(),price);
         machine.putCoin(Coin.QUARTER);
-        DropBox<Product, List<Coin>> dropBox = machine.getProductAndRemainingPrice();
-        Product product = dropBox.getProduct();
-        List<Coin> coins = dropBox.getCoins();
+        CollectionBox<Product, List<Coin>> collectionBox = machine.getProductAndRemainingPrice();
+        Product product = collectionBox.getProduct();
+        List<Coin> coins = collectionBox.getCoins();
         assertEquals(Product.CHOCOLATE,product);
         assertEquals(coins.get(0),Coin.DIME);
 
@@ -47,7 +47,7 @@ public class MachineTest {
     public void getProductAndRemainingPrice_CoolDrinkFor10Coins_IncompletePayment(){
         long price = machine.getPrice(Product.COOL_DRINK);
         machine.putCoin(Coin.CENT);
-        DropBox<Product,List<Coin>> dropBox = machine.getProductAndRemainingPrice();
+        CollectionBox<Product,List<Coin>> collectionBox = machine.getProductAndRemainingPrice();
     }
 
     @Test(expected = OutOfStockException.class)
@@ -86,9 +86,9 @@ public class MachineTest {
         long price = machine.getPrice(Product.COOL_DRINK);
         assertEquals(Product.COOL_DRINK.getPrice(),price);
         machine.putCoin(Coin.HALF_DOLLAR);
-        DropBox<Product, List<Coin>> dropBox = machine.getProductAndRemainingPrice();
-        Product product = dropBox.getProduct();
-        List<Coin> coins = dropBox.getCoins();
+        CollectionBox<Product, List<Coin>> collectionBox = machine.getProductAndRemainingPrice();
+        Product product = collectionBox.getProduct();
+        List<Coin> coins = collectionBox.getCoins();
         assertEquals(Product.COOL_DRINK,product);
         assertEquals(coins.get(0),Coin.QUARTER);
     }

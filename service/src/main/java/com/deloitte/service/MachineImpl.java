@@ -41,11 +41,11 @@ public class MachineImpl implements Machine {
     }
 
     @Override
-    public DropBox<Product, List<Coin>> getProductAndRemainingPrice() {
+    public CollectionBox<Product, List<Coin>> getProductAndRemainingPrice() {
         Product product = collectItem();
         turnOver = turnOver + selectedProduct.getPrice();
         List<Coin> change = collectChange();
-        return new DropBox<Product, List<Coin>>(product, change);
+        return new CollectionBox<Product, List<Coin>>(product, change);
     }
 
     private Product collectItem() throws NoChangeException, IncompletePaymentException {

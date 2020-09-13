@@ -3,6 +3,6 @@ com/deloitte/base/enm/Product.class
 com/deloitte/base/Stock.class
 com/deloitte/base/exception/OutOfStockException.class
 com/deloitte/base/exception/IncompletePaymentException.class
-com/deloitte/base/DropBox.class
 com/deloitte/base/exception/NoChangeException.class
 com/deloitte/base/intrfc/Machine.class
+com/deloitte/base/CollectionBox.class
