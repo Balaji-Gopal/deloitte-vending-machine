@@ -63,7 +63,7 @@ public class MachineImpl implements Machine {
     private List<Coin> collectChange() {
         long changeAmount = balance - selectedProduct.getPrice();
         List<Coin> change = getChange(changeAmount);
-        updateCashInventory(change);
+        updateCashStock(change);
         balance = 0;
         selectedProduct = null;
         return change;
@@ -72,7 +72,7 @@ public class MachineImpl implements Machine {
     @Override
     public List<Coin> cancel() {
         List<Coin> refund = getChange(balance);
-        updateCashInventory(refund);
+        updateCashStock(refund);
         balance = 0;
         selectedProduct = null;
         return refund;
@@ -156,7 +156,7 @@ public class MachineImpl implements Machine {
         return true;
     }
 
-    private void updateCashInventory(List<Coin> change) {
+    private void updateCashStock(List<Coin> change) {
         for (Coin c : change) {
             coinStock.reduce(c);
         }
