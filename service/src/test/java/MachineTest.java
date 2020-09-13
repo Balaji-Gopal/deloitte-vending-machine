@@ -36,7 +36,7 @@ public class MachineTest {
         assertEquals(Product.CHOCOLATE.getPrice(),price);
         machine.putCoin(Coin.QUARTER);
         DropBox<Product, List<Coin>> dropBox = machine.getProductAndRemainingPrice();
-        Product product = dropBox.getItem();
+        Product product = dropBox.getProduct();
         List<Coin> coins = dropBox.getCoins();
         assertEquals(Product.CHOCOLATE,product);
         assertEquals(coins.get(0),Coin.DIME);
@@ -87,7 +87,7 @@ public class MachineTest {
         assertEquals(Product.COOL_DRINK.getPrice(),price);
         machine.putCoin(Coin.HALF_DOLLAR);
         DropBox<Product, List<Coin>> dropBox = machine.getProductAndRemainingPrice();
-        Product product = dropBox.getItem();
+        Product product = dropBox.getProduct();
         List<Coin> coins = dropBox.getCoins();
         assertEquals(Product.COOL_DRINK,product);
         assertEquals(coins.get(0),Coin.QUARTER);

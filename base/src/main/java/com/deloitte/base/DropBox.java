@@ -1,16 +1,16 @@
 package com.deloitte.base;
 
-public class DropBox<I,C> {
-    private I item;
+public class DropBox<P,C> {
+    private P product;
     private C coins;
-    public I getItem(){
-        return  item;
+    public P getProduct(){
+        return product;
     }
     public C getCoins(){
         return coins;
     }
-    public DropBox(I item, C coins) {
-        this.item = item;
+    public DropBox(P product, C coins) {
+        this.product = product;
         this.coins = coins;
     }
 }
